@@ -4,7 +4,7 @@ pipeline {
         stage ('setup') {
             steps {
                 sh '''
-                    sudo python3 -m venv venv
+                    python3 -m venv venv
                     sudo venv/bin/pip install -r lambda-app/requirements.txt
                 '''
             }
