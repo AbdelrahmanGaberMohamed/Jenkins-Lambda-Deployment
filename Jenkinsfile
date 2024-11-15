@@ -4,6 +4,7 @@ pipline {
         stage ('setup') {
             steps {
                 sh '''
+                    echo "Code checkout"
                     pip install -r lambda-app/requirements.txt
                 '''
             }
