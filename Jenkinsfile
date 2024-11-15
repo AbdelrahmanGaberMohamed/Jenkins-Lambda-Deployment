@@ -5,6 +5,7 @@ pipeline {
             steps {
                 sh '''
                     python3 -m venv venv
+                    source venv
                     venv/bin/pip install -r tests/requirements.txt
                 '''
             }
@@ -19,6 +20,7 @@ pipeline {
         stage ('build') {
             steps {
                 sh '''
+                    source venv
                     sam build -t template.yaml
                 '''
             }
