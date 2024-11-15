@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh '''
                     python3 -m venv venv
-                    venv/bin/pip install -r lambda-app/hello_world/requirements.txt
+                    venv/bin/pip install -r hello_world/requirements.txt
                 '''
             }
         }
@@ -19,7 +19,7 @@ pipeline {
         stage ('build') {
             steps {
                 sh '''
-                    sam build -t lambda-app/template.yaml
+                    sam build -t template.yaml
                 '''
             }
         }
