@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh '''
                     python3 -m venv venv
-                    venv/bin/pip install -r hello_world/requirements.txt
+                    venv/bin/pip install -r tests/requirements.txt
                 '''
             }
         }
