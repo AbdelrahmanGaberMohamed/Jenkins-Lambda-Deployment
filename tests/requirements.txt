@@ -1,4 +1,4 @@
 pytest
 boto3
 requests
-samcli
+aws-sam-cli
