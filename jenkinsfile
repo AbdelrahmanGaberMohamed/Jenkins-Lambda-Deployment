@@ -1,7 +1,7 @@
 pipline {
     agent any
     stages {
-        stage ('setup') {
+        stage ('setup-env') {
             steps {
                 sh '''
                     pip install -r lambda-app/requirements.txt
