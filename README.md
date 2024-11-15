@@ -1,5 +1,3 @@
-# Build Counter
-  - 2.0
 # Note:
 Original code repo:https://github.com/kodekloudhub/course-jenkins-project
 Additions made:
