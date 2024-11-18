@@ -34,7 +34,7 @@ pipeline {
             steps {
                 sh '''
                     source venv/bin/activate
-                    venv/bin/sam deploy -t lambda-app/template.yaml --no-confirm-changeset --no-fail-on-empty-changeset
+                    venv/bin/sam deploy -t lambda-app/template.yaml --stack-name helloWorld --no-confirm-changeset --no-fail-on-empty-changeset
                 '''
             }
         }
