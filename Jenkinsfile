@@ -5,6 +5,7 @@ pipeline {
             steps {
                 sh '''
                     python3 -m venv venv
+                    source venv/bin/activate
                     venv/bin/pip install -r tests/requirements.txt
                 '''
             }
@@ -19,7 +20,7 @@ pipeline {
         stage ('build') {
             steps {
                 sh '''
-                    echo $PATH
+                    source venv/bin/activate
                     venv/bin/sam build -t template.yaml
                 '''
             }
@@ -32,6 +33,7 @@ pipeline {
             }
             steps {
                 sh '''
+                    source venv/bin/activate
                     venv/bin/sam deploy -t lambda-app/template.yaml --no-confirm-changeset --no-fail-on-empty-changeset
                 '''
             }
