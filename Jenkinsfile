@@ -19,7 +19,7 @@ pipeline {
         stage ('build') {
             steps {
                 sh '''
-                    venv/bin/python3 -m ensurepip --upgrade
+                    echo $PATH
                     venv/bin/sam build -t template.yaml
                 '''
             }
